@@ -6,6 +6,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
         <link rel="stylesheet" href="assets/css/style.min.css">
         
+        <link rel="shortcut icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
+        
         <!-- Useful meta tags -->
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,22 +26,29 @@
                 <div class="container">
                     <div class="header__inner">
                         <a href="#" class="header__logo">
-                            <img src="assets/images/logo.png" alt="czementart logo" />
+                            <img src="assets/images/logo.png" alt="czementart logo">
                         </a>
-                        <ul class="nav">
-                            <li><a href="#">Каталог</a></li>
-                            <li><a href="#">услуги</a></li>
-                            <li><a href="#">о компании</a></li>
-                            <li><a href="#">вопросы</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
+                        <nav>
+                            <ul class="nav">
+                                <li><a href="#catalog">Каталог</a></li>
+                                <li><a href="#services">услуги</a></li>
+                                <li><a href="#about">о компании</a></li>
+                                <li><a href="#consultation-form">вопросы</a></li>
+                                <li><a href="#contacts">Контакты</a></li>
+                            </ul>
+                        </nav>
         
                         <div class="header__cta">
                             <div class="header__phone">
                                 <div class="change-language">Язык</div>
                                 <a href="tel:+79093651107">+7 909 365-11-07</a>
                             </div>
-                            <button>заказать обратный звонок</button>
+                            <div class="menu-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <button class="open-modal" data-modal="1">заказать обратный звонок</button>
                         </div>
                     </div>
                 </div>
@@ -46,13 +56,52 @@
         
             <div class="header__bottom">
                 <div class="container">
-                    <ul class="nav white-hover">
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="#">услуги</a></li>
-                        <li><a href="#">о компании</a></li>
-                        <li><a href="#">вопросы</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
+                    <nav>
+                        <ul class="nav white-hover">
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">услуги</a></li>
+                            <li><a href="#">о компании</a></li>
+                            <li><a href="#">вопросы</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <button class="open-modal" data-modal="1">заказать обратный звонок</button>
+                </div>
+            </div>
+        
+            <div class="container">
+                <div class="menu">
+                    <div class="menu__wrapper">
+                        <div class="menu__top">
+                            <div class="header__location">
+                                Россия, Белоруссия, Казахстан
+                            </div>
+                        </div>
+                        <div class="menu__middle">
+                            <ul>
+                                <li><a class="menu__link" href="#catalog">Каталог</a></li>
+                                <li><a class="menu__link" href="#catalog">услуги</a></li>
+                                <li><a class="menu__link" href="#catalog">о компании</a></li>
+                            </ul>
+                            <ul>
+                                <li><a class="menu__link" href="#about">Вопросы</a></li>
+                                <li><a class="menu__link" href="#training">контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu__bottom">
+                            <div class="menu__bottom-contacts">
+                                <div class="contacts__address">
+                                    г. Сочи, улица Трунова, д.6 с.1
+                                </div>
+                                <div class="contacts__address-bottom">
+                                    с 09.00 до 21.00, без выходных
+                                </div>
+                            </div>
+                            <div class="menu__bottom-mail">
+                                <div>office@cementart.com</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -62,21 +111,20 @@
 <section class="hero">
     <div class="container">
         <div class="hero__inner">
-            <h1>Микробетон и Микроцемент</h1>
+            <h1>Микробетон<br> и Микроцемент</h1>
             <p class="hero__text">
                 Весь ассортимент продукции “Czement ART” сертифицирован и
                 отвечает всем нормам качественного Российского производства.
                 Производим! Консультируем! Укладываем! Все о бетоне и не только.
                 Российский производитель.
             </p>
-            <button class="btn btn--cta">обсудить проект</button>
+            <a href="#consultation-form" class="btn btn--cta hero__btn">обсудить проект</a>
             <div class="hero__left-abs">Декоративные покрытия</div>
         </div>
 
         <div class="hero__bottom">
             <a class="hero__mail" href="mailto:office@czementart.сom"
-                >office@czementart.сom</a
-            >
+                >office@czementart.сom</a>
             <div class="media">
                 <a href="#"
                     ><svg
@@ -188,7 +236,457 @@
             <div class="catalog__item" data-category="pro">
                 <div class="catalog__item-front">
                     <div class="catalog__item-img">
-                        <img src="assets/images/catalog/img.png" alt="#" />
+                        <img src="assets/images/catalog/img.png" alt="#">
+                    </div>
+                    <h3 class="catalog__item-title title title--h3">
+                        эпоксидный двухкомпонентный загуститель для микроцемента
+                        и микробетона “Epoxy industrial”
+                    </h3>
+                    <div class="catalog__item-bottom">
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">5 кг</div>
+                            <div class="catalog__item-price">2 890 руб.</div>
+                        </div>
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">10 кг</div>
+                            <div class="catalog__item-price">5 190 руб.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__item-back">
+                    <div class="catalog__item-advantages">
+                        <span>Время</span>
+                        <p>
+                            Экономится время за счет минимального образования
+                            строительного мусора.
+                        </p>
+                    </div>
+                    <div class="catalog__item-advantages">
+                        <span>Cлой</span>
+                        <p>
+                            Толщина наносимого слоя всего — 0,8 мм за слой (не
+                            добавляет веса конструктивным элементам)
+                        </p>
+                    </div>
+                    <p>
+                        Отличная адгезия с различными основаниями. Бесшовное
+                        покрытие не только радует глаз, но и удобно убирать! За
+                        счёт применения защитных пропиток и лаков, может
+                        применяться в мокрых зонах. Не требуют затратных
+                        ремонтных мероприятий.
+                    </p>
+                    <p>
+                        Может применяться на полах с подогревом.Природная
+                        составляющая микроцемента делает его экологически чистым
+                        продуктом. Микроцемент легко моется обычным моющим
+                        средством. Можно нанести и самому.
+                    </p>
+                </div>
+            </div>
+            <div class="catalog__item" data-category="pro">
+                <div class="catalog__item-front">
+                    <div class="catalog__item-img">
+                        <img src="assets/images/catalog/img.png" alt="#">
+                    </div>
+                    <h3 class="catalog__item-title title title--h3">
+                        эпоксидный двухкомпонентный загуститель для микроцемента
+                        и микробетона “Epoxy industrial”
+                    </h3>
+                    <div class="catalog__item-bottom">
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">5 кг</div>
+                            <div class="catalog__item-price">2 890 руб.</div>
+                        </div>
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">10 кг</div>
+                            <div class="catalog__item-price">5 190 руб.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__item-back">
+                    <div class="catalog__item-advantages">
+                        <span>Время</span>
+                        <p>
+                            Экономится время за счет минимального образования
+                            строительного мусора.
+                        </p>
+                    </div>
+                    <div class="catalog__item-advantages">
+                        <span>Cлой</span>
+                        <p>
+                            Толщина наносимого слоя всего — 0,8 мм за слой (не
+                            добавляет веса конструктивным элементам)
+                        </p>
+                    </div>
+                    <p>
+                        Отличная адгезия с различными основаниями. Бесшовное
+                        покрытие не только радует глаз, но и удобно убирать! За
+                        счёт применения защитных пропиток и лаков, может
+                        применяться в мокрых зонах. Не требуют затратных
+                        ремонтных мероприятий.
+                    </p>
+                    <p>
+                        Может применяться на полах с подогревом.Природная
+                        составляющая микроцемента делает его экологически чистым
+                        продуктом. Микроцемент легко моется обычным моющим
+                        средством. Можно нанести и самому.
+                    </p>
+                </div>
+            </div>
+            <div class="catalog__item" data-category="pro">
+                <div class="catalog__item-front">
+                    <div class="catalog__item-img">
+                        <img src="assets/images/catalog/img.png" alt="#">
+                    </div>
+                    <h3 class="catalog__item-title title title--h3">
+                        эпоксидный двухкомпонентный загуститель для микроцемента
+                        и микробетона “Epoxy industrial”
+                    </h3>
+                    <div class="catalog__item-bottom">
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">5 кг</div>
+                            <div class="catalog__item-price">2 890 руб.</div>
+                        </div>
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">10 кг</div>
+                            <div class="catalog__item-price">5 190 руб.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__item-back">
+                    <div class="catalog__item-advantages">
+                        <span>Время</span>
+                        <p>
+                            Экономится время за счет минимального образования
+                            строительного мусора.
+                        </p>
+                    </div>
+                    <div class="catalog__item-advantages">
+                        <span>Cлой</span>
+                        <p>
+                            Толщина наносимого слоя всего — 0,8 мм за слой (не
+                            добавляет веса конструктивным элементам)
+                        </p>
+                    </div>
+                    <p>
+                        Отличная адгезия с различными основаниями. Бесшовное
+                        покрытие не только радует глаз, но и удобно убирать! За
+                        счёт применения защитных пропиток и лаков, может
+                        применяться в мокрых зонах. Не требуют затратных
+                        ремонтных мероприятий.
+                    </p>
+                    <p>
+                        Может применяться на полах с подогревом.Природная
+                        составляющая микроцемента делает его экологически чистым
+                        продуктом. Микроцемент легко моется обычным моющим
+                        средством. Можно нанести и самому.
+                    </p>
+                </div>
+            </div>
+            <div class="catalog__item" data-category="pro">
+                <div class="catalog__item-front">
+                    <div class="catalog__item-img">
+                        <img src="assets/images/catalog/img.png" alt="#">
+                    </div>
+                    <h3 class="catalog__item-title title title--h3">
+                        эпоксидный двухкомпонентный загуститель для микроцемента
+                        и микробетона “Epoxy industrial”
+                    </h3>
+                    <div class="catalog__item-bottom">
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">5 кг</div>
+                            <div class="catalog__item-price">2 890 руб.</div>
+                        </div>
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">10 кг</div>
+                            <div class="catalog__item-price">5 190 руб.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__item-back">
+                    <div class="catalog__item-advantages">
+                        <span>Время</span>
+                        <p>
+                            Экономится время за счет минимального образования
+                            строительного мусора.
+                        </p>
+                    </div>
+                    <div class="catalog__item-advantages">
+                        <span>Cлой</span>
+                        <p>
+                            Толщина наносимого слоя всего — 0,8 мм за слой (не
+                            добавляет веса конструктивным элементам)
+                        </p>
+                    </div>
+                    <p>
+                        Отличная адгезия с различными основаниями. Бесшовное
+                        покрытие не только радует глаз, но и удобно убирать! За
+                        счёт применения защитных пропиток и лаков, может
+                        применяться в мокрых зонах. Не требуют затратных
+                        ремонтных мероприятий.
+                    </p>
+                    <p>
+                        Может применяться на полах с подогревом.Природная
+                        составляющая микроцемента делает его экологически чистым
+                        продуктом. Микроцемент легко моется обычным моющим
+                        средством. Можно нанести и самому.
+                    </p>
+                </div>
+            </div>
+            <div class="catalog__item" data-category="pro">
+                <div class="catalog__item-front">
+                    <div class="catalog__item-img">
+                        <img src="assets/images/catalog/img.png" alt="#">
+                    </div>
+                    <h3 class="catalog__item-title title title--h3">
+                        эпоксидный двухкомпонентный загуститель для микроцемента
+                        и микробетона “Epoxy industrial”
+                    </h3>
+                    <div class="catalog__item-bottom">
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">5 кг</div>
+                            <div class="catalog__item-price">2 890 руб.</div>
+                        </div>
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">10 кг</div>
+                            <div class="catalog__item-price">5 190 руб.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__item-back">
+                    <div class="catalog__item-advantages">
+                        <span>Время</span>
+                        <p>
+                            Экономится время за счет минимального образования
+                            строительного мусора.
+                        </p>
+                    </div>
+                    <div class="catalog__item-advantages">
+                        <span>Cлой</span>
+                        <p>
+                            Толщина наносимого слоя всего — 0,8 мм за слой (не
+                            добавляет веса конструктивным элементам)
+                        </p>
+                    </div>
+                    <p>
+                        Отличная адгезия с различными основаниями. Бесшовное
+                        покрытие не только радует глаз, но и удобно убирать! За
+                        счёт применения защитных пропиток и лаков, может
+                        применяться в мокрых зонах. Не требуют затратных
+                        ремонтных мероприятий.
+                    </p>
+                    <p>
+                        Может применяться на полах с подогревом.Природная
+                        составляющая микроцемента делает его экологически чистым
+                        продуктом. Микроцемент легко моется обычным моющим
+                        средством. Можно нанести и самому.
+                    </p>
+                </div>
+            </div>
+            <div class="catalog__item" data-category="pro">
+                <div class="catalog__item-front">
+                    <div class="catalog__item-img">
+                        <img src="assets/images/catalog/img.png" alt="#">
+                    </div>
+                    <h3 class="catalog__item-title title title--h3">
+                        эпоксидный двухкомпонентный загуститель для микроцемента
+                        и микробетона “Epoxy industrial”
+                    </h3>
+                    <div class="catalog__item-bottom">
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">5 кг</div>
+                            <div class="catalog__item-price">2 890 руб.</div>
+                        </div>
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">10 кг</div>
+                            <div class="catalog__item-price">5 190 руб.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__item-back">
+                    <div class="catalog__item-advantages">
+                        <span>Время</span>
+                        <p>
+                            Экономится время за счет минимального образования
+                            строительного мусора.
+                        </p>
+                    </div>
+                    <div class="catalog__item-advantages">
+                        <span>Cлой</span>
+                        <p>
+                            Толщина наносимого слоя всего — 0,8 мм за слой (не
+                            добавляет веса конструктивным элементам)
+                        </p>
+                    </div>
+                    <p>
+                        Отличная адгезия с различными основаниями. Бесшовное
+                        покрытие не только радует глаз, но и удобно убирать! За
+                        счёт применения защитных пропиток и лаков, может
+                        применяться в мокрых зонах. Не требуют затратных
+                        ремонтных мероприятий.
+                    </p>
+                    <p>
+                        Может применяться на полах с подогревом.Природная
+                        составляющая микроцемента делает его экологически чистым
+                        продуктом. Микроцемент легко моется обычным моющим
+                        средством. Можно нанести и самому.
+                    </p>
+                </div>
+            </div>
+            <div class="catalog__item" data-category="pro">
+                <div class="catalog__item-front">
+                    <div class="catalog__item-img">
+                        <img src="assets/images/catalog/img.png" alt="#">
+                    </div>
+                    <h3 class="catalog__item-title title title--h3">
+                        эпоксидный двухкомпонентный загуститель для микроцемента
+                        и микробетона “Epoxy industrial”
+                    </h3>
+                    <div class="catalog__item-bottom">
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">5 кг</div>
+                            <div class="catalog__item-price">2 890 руб.</div>
+                        </div>
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">10 кг</div>
+                            <div class="catalog__item-price">5 190 руб.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__item-back">
+                    <div class="catalog__item-advantages">
+                        <span>Время</span>
+                        <p>
+                            Экономится время за счет минимального образования
+                            строительного мусора.
+                        </p>
+                    </div>
+                    <div class="catalog__item-advantages">
+                        <span>Cлой</span>
+                        <p>
+                            Толщина наносимого слоя всего — 0,8 мм за слой (не
+                            добавляет веса конструктивным элементам)
+                        </p>
+                    </div>
+                    <p>
+                        Отличная адгезия с различными основаниями. Бесшовное
+                        покрытие не только радует глаз, но и удобно убирать! За
+                        счёт применения защитных пропиток и лаков, может
+                        применяться в мокрых зонах. Не требуют затратных
+                        ремонтных мероприятий.
+                    </p>
+                    <p>
+                        Может применяться на полах с подогревом.Природная
+                        составляющая микроцемента делает его экологически чистым
+                        продуктом. Микроцемент легко моется обычным моющим
+                        средством. Можно нанести и самому.
+                    </p>
+                </div>
+            </div>
+            <div class="catalog__item" data-category="pro">
+                <div class="catalog__item-front">
+                    <div class="catalog__item-img">
+                        <img src="assets/images/catalog/img.png" alt="#">
+                    </div>
+                    <h3 class="catalog__item-title title title--h3">
+                        эпоксидный двухкомпонентный загуститель для микроцемента
+                        и микробетона “Epoxy industrial”
+                    </h3>
+                    <div class="catalog__item-bottom">
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">5 кг</div>
+                            <div class="catalog__item-price">2 890 руб.</div>
+                        </div>
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">10 кг</div>
+                            <div class="catalog__item-price">5 190 руб.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__item-back">
+                    <div class="catalog__item-advantages">
+                        <span>Время</span>
+                        <p>
+                            Экономится время за счет минимального образования
+                            строительного мусора.
+                        </p>
+                    </div>
+                    <div class="catalog__item-advantages">
+                        <span>Cлой</span>
+                        <p>
+                            Толщина наносимого слоя всего — 0,8 мм за слой (не
+                            добавляет веса конструктивным элементам)
+                        </p>
+                    </div>
+                    <p>
+                        Отличная адгезия с различными основаниями. Бесшовное
+                        покрытие не только радует глаз, но и удобно убирать! За
+                        счёт применения защитных пропиток и лаков, может
+                        применяться в мокрых зонах. Не требуют затратных
+                        ремонтных мероприятий.
+                    </p>
+                    <p>
+                        Может применяться на полах с подогревом.Природная
+                        составляющая микроцемента делает его экологически чистым
+                        продуктом. Микроцемент легко моется обычным моющим
+                        средством. Можно нанести и самому.
+                    </p>
+                </div>
+            </div>
+            <div class="catalog__item" data-category="pro">
+                <div class="catalog__item-front">
+                    <div class="catalog__item-img">
+                        <img src="assets/images/catalog/img.png" alt="#">
+                    </div>
+                    <h3 class="catalog__item-title title title--h3">
+                        эпоксидный двухкомпонентный загуститель для микроцемента
+                        и микробетона “Epoxy industrial”
+                    </h3>
+                    <div class="catalog__item-bottom">
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">5 кг</div>
+                            <div class="catalog__item-price">2 890 руб.</div>
+                        </div>
+                        <div class="catalog__item-unit">
+                            <div class="catalog__item-weight">10 кг</div>
+                            <div class="catalog__item-price">5 190 руб.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__item-back">
+                    <div class="catalog__item-advantages">
+                        <span>Время</span>
+                        <p>
+                            Экономится время за счет минимального образования
+                            строительного мусора.
+                        </p>
+                    </div>
+                    <div class="catalog__item-advantages">
+                        <span>Cлой</span>
+                        <p>
+                            Толщина наносимого слоя всего — 0,8 мм за слой (не
+                            добавляет веса конструктивным элементам)
+                        </p>
+                    </div>
+                    <p>
+                        Отличная адгезия с различными основаниями. Бесшовное
+                        покрытие не только радует глаз, но и удобно убирать! За
+                        счёт применения защитных пропиток и лаков, может
+                        применяться в мокрых зонах. Не требуют затратных
+                        ремонтных мероприятий.
+                    </p>
+                    <p>
+                        Может применяться на полах с подогревом.Природная
+                        составляющая микроцемента делает его экологически чистым
+                        продуктом. Микроцемент легко моется обычным моющим
+                        средством. Можно нанести и самому.
+                    </p>
+                </div>
+            </div>
+            <div class="catalog__item" data-category="pro">
+                <div class="catalog__item-front">
+                    <div class="catalog__item-img">
+                        <img src="assets/images/catalog/img.png" alt="#">
                     </div>
                     <h3 class="catalog__item-title title title--h3">
                         эпоксидный двухкомпонентный загуститель для микроцемента
@@ -238,7 +736,7 @@
             <div class="catalog__item" data-category="microcement">
                 <div class="catalog__item-front">
                     <div class="catalog__item-img">
-                        <img src="assets/images/catalog/img.png" alt="#" />
+                        <img src="assets/images/catalog/img.png" alt="#">
                     </div>
                     <h3 class="catalog__item-title title title--h3">
                         Микроцемент aqwa Czement Art
@@ -291,7 +789,7 @@
             <div class="catalog__item" data-category="microconcrete">
                 <div class="catalog__item-front">
                     <div class="catalog__item-img">
-                        <img src="assets/images/catalog/img.png" alt="#" />
+                        <img src="assets/images/catalog/img.png" alt="#">
                     </div>
                     <h3 class="catalog__item-title title title--h3">
                         Микроцемент aqwa Czement Art
@@ -344,7 +842,7 @@
             <div class="catalog__item" data-category="microconcrete">
                 <div class="catalog__item-front">
                     <div class="catalog__item-img">
-                        <img src="assets/images/catalog/img.png" alt="#" />
+                        <img src="assets/images/catalog/img.png" alt="#">
                     </div>
                     <h3 class="catalog__item-title title title--h3">
                         Микроцемент aqwa Czement Art
@@ -397,7 +895,7 @@
             <div class="catalog__item" data-category="lak">
                 <div class="catalog__item-front">
                     <div class="catalog__item-img">
-                        <img src="assets/images/catalog/img.png" alt="#" />
+                        <img src="assets/images/catalog/img.png" alt="#">
                     </div>
                     <h3 class="catalog__item-title title title--h3">
                         Микроцемент aqwa Czement Art
@@ -455,7 +953,7 @@
             </div>
         </div>
 
-        <button class="btn btn--more">Смотреть еще</button>
+        <button class="btn btn--more catalog__btn">Смотреть еще</button>
     </div>
 </section>
 
@@ -542,7 +1040,10 @@
         <h2 class="d-none">Позвоните нам</h2>
         <div class="calltous__inner">
             <div class="calltous__left">
-                <img src="assets/images/calltous/left.png" alt="#">
+                <picture>
+                    <source srcset="assets/images/calltous/left-mini.png" media="(max-width: 1230px)">
+                    <img src="assets/images/calltous/left.png" alt="#">
+                </picture>
             </div>
             <div class="calltous__right">
                 <p>
@@ -552,7 +1053,7 @@
                     Позвоните нам По любым вопросам, касающимся розничной или оптовой покупки микроцемента и микробетона, а также его профессионального нанесения на полы и стены! обращайтесь к нам.<br> 
                     Мы всегда рады!
                 </p>
-                <button class="btn btn--cta calltous__btn">заказать звонок</button>
+                <button class="open-modal btn btn--cta calltous__btn" data-modal="1">заказать звонок</button>
             </div>
         </div>
     </div>
@@ -630,7 +1131,7 @@
         </div>
 
         <div class="about__footer">
-            <button class="btn btn--cta">Обсудить проект</button>
+            <button data-modal="1" class="open-modal btn btn--cta">Обсудить проект</button>
             <p>Поможем воплотить все<br> 
                 ваши смелые фантазии.</p>
         </div>
@@ -646,13 +1147,10 @@
             </p>
         </div>
         <div class="partners__map">
-            <!-- <img src="assets/images/partners/map.jpg" alt="Карта партнеров"> -->
-            <!-- <iframe src="https://www.google.com/maps/d/embed?mid=1gvy20gb0jAKLwXy6EeT_TcPjwplnMHI&ehbc=2E312F" width="640" height="480"></iframe> -->
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af8100507567ead8b1b4994ab0e71803d1c30f570ddbc5d8d0e2d59fd3db05d98&amp;source=constructor" width="1180" height="555" frameborder="0"></iframe>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af8100507567ead8b1b4994ab0e71803d1c30f570ddbc5d8d0e2d59fd3db05d98&amp;source=constructor"></iframe>
         </div>
 
         <div class="partners__inner">
-            <div class="partners__col">
                 <div class="partners__item">
                     <div class="partners__city">Москва</div>
                     <a href="https://microcement-pol.ru" target="_blank">https://microcement-pol.ru</a>
@@ -660,8 +1158,8 @@
                     <a href="mailto:zakaz@microcement-pol.ru">zakaz@microcement-pol.ru</a>
                 </div>
                 <div class="partners__item">
-                    <div class="partners__city" target="_blank">Москва</div>
-                    <a href="https://www.stroypolymer.ru">https://www.stroypolymer.ru</a>
+                    <div class="partners__city">Москва</div>
+                    <a href="https://www.stroypolymer.ru" target="_blank">https://www.stroypolymer.ru</a>
                     <a href="tel:+74955452151">+7 495 545-21-51</a>
                     <a href="mailto:info@stroypolymer.ru">info@stroypolymer.ru</a>
                 </div>
@@ -677,8 +1175,6 @@
                     <a href="tel:+79787919091">+7 (978) 791-90-91</a>
                     <a href="mailto:creative-pol@mail.ru">creative-pol@mail.ru</a>
                 </div>
-            </div>
-            <div class="partners__col">
                 <div class="partners__item">
                     <div class="partners__city">Москва</div>
                     <a href="https://microcement-pol.ru" target="_blank">https://microcement-pol.ru</a>
@@ -686,8 +1182,8 @@
                     <a href="mailto:zakaz@microcement-pol.ru">zakaz@microcement-pol.ru</a>
                 </div>
                 <div class="partners__item">
-                    <div class="partners__city" target="_blank">Москва</div>
-                    <a href="https://www.stroypolymer.ru">https://www.stroypolymer.ru</a>
+                    <div class="partners__city">Москва</div>
+                    <a href="https://www.stroypolymer.ru" target="_blank">https://www.stroypolymer.ru</a>
                     <a href="tel:+74955452151">+7 495 545-21-51</a>
                     <a href="mailto:info@stroypolymer.ru">info@stroypolymer.ru</a>
                 </div>
@@ -703,8 +1199,6 @@
                     <a href="tel:+79787919091">+7 (978) 791-90-91</a>
                     <a href="mailto:creative-pol@mail.ru">creative-pol@mail.ru</a>
                 </div>
-            </div>
-            <div class="partners__col">
                 <div class="partners__item">
                     <div class="partners__city">Москва</div>
                     <a href="https://microcement-pol.ru" target="_blank">https://microcement-pol.ru</a>
@@ -712,8 +1206,8 @@
                     <a href="mailto:zakaz@microcement-pol.ru">zakaz@microcement-pol.ru</a>
                 </div>
                 <div class="partners__item">
-                    <div class="partners__city" target="_blank">Москва</div>
-                    <a href="https://www.stroypolymer.ru">https://www.stroypolymer.ru</a>
+                    <div class="partners__city">Москва</div>
+                    <a href="https://www.stroypolymer.ru" target="_blank">https://www.stroypolymer.ru</a>
                     <a href="tel:+74955452151">+7 495 545-21-51</a>
                     <a href="mailto:info@stroypolymer.ru">info@stroypolymer.ru</a>
                 </div>
@@ -729,8 +1223,6 @@
                     <a href="tel:+79787919091">+7 (978) 791-90-91</a>
                     <a href="mailto:creative-pol@mail.ru">creative-pol@mail.ru</a>
                 </div>
-            </div>
-            <div class="partners__col">
                 <div class="partners__item">
                     <div class="partners__city">Москва</div>
                     <a href="https://microcement-pol.ru" target="_blank">https://microcement-pol.ru</a>
@@ -738,8 +1230,8 @@
                     <a href="mailto:zakaz@microcement-pol.ru">zakaz@microcement-pol.ru</a>
                 </div>
                 <div class="partners__item">
-                    <div class="partners__city" target="_blank">Москва</div>
-                    <a href="https://www.stroypolymer.ru">https://www.stroypolymer.ru</a>
+                    <div class="partners__city">Москва</div>
+                    <a href="https://www.stroypolymer.ru" target="_blank">https://www.stroypolymer.ru</a>
                     <a href="tel:+74955452151">+7 495 545-21-51</a>
                     <a href="mailto:info@stroypolymer.ru">info@stroypolymer.ru</a>
                 </div>
@@ -755,8 +1247,8 @@
                     <a href="tel:+79787919091">+7 (978) 791-90-91</a>
                     <a href="mailto:creative-pol@mail.ru">creative-pol@mail.ru</a>
                 </div>
-            </div>
         </div>
+        <button class="partners__btn">Смотреть еще</button>
     </div>
 </section>
 
@@ -777,7 +1269,7 @@
                 <form class="contacts__form" action="#" id="contacts-form">
                     <div class="contacts__inputs">
                         <input type="text" name="name" placeholder="Имя" required>
-                        <input type="tel" name="tel" placeholder="Телефон" required>
+                        <input type="tel" name="phone" placeholder="Телефон" required>
                     </div>
                     <input type="email" name="email" placeholder="Email" required>
                     <div class="checkbox">
@@ -889,14 +1381,14 @@
         <footer class="footer">
             <div class="container">
                 <a href="#" class="footer__logo">
-                    <img src="assets/images/logo.png" alt="czementart logo" />
+                    <img src="assets/images/logo.png" alt="czementart logo">
                 </a>
         
                 <div class="footer__inner">
                     <div class="footer__col">
                         <div class="footer__cta">
                             <a href="tel:+79093651107">+7 (909) 365-11-07</a>
-                            <a href="#">Заказать звонок</a>
+                            <a href="#consultation-form">Заказать звонок</a>
                         </div>
                         <div class="media">
                             <a href="#"
@@ -1004,7 +1496,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="#contacts"
                                     >вопросы<svg
                                         width="19"
                                         height="18"
@@ -1067,16 +1559,16 @@
                                     </svg>
                                 </a>
                             </li>
-                            <li>
+                            <div>
                                 <form action="#" class="footer-form">
-                                    <input type="email" placeholder="Email" required>
+                                    <input type="email" name="email" placeholder="Email" required>
                                     <div class="checkbox">
                                         <input type="checkbox" name="checkbox" id="footer-checkbox" required>
                                         <label for="footer-checkbox">Оставляя свои данные, я принимаю<br> политику конфедициальности</label>
                                     </div>
                                     <button class="footer__btn" type="submit">Получить коммерческое предложение</button>
                                 </form>
-                            </li>
+                            </div>
                         </ul>
                     </div>
                 </div>
@@ -1102,7 +1594,50 @@
             </div>
         </footer>
 
-        <!-- JS -->
+        <div class="modal" data-modal="1">
+            <div class="modal__dialog">
+                <svg width="36" class="modal__cross modal__close" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.41 18.0003L26.7 10.7103C26.8638 10.519 26.9494 10.2729 26.9397 10.0212C26.93 9.76953 26.8256 9.53079 26.6475 9.3527C26.4694 9.1746 26.2307 9.07027 25.979 9.06055C25.7274 9.05083 25.4813 9.13644 25.29 9.30026L18 16.5903L10.71 9.29026C10.5187 9.12643 10.2726 9.04083 10.0209 9.05055C9.76924 9.06027 9.53051 9.1646 9.35241 9.3427C9.17432 9.52079 9.06998 9.75953 9.06026 10.0112C9.05054 10.2629 9.13615 10.509 9.29997 10.7003L16.59 18.0003L9.28997 25.2903C9.18529 25.3799 9.10027 25.4902 9.04025 25.6143C8.98022 25.7384 8.94649 25.8735 8.94117 26.0112C8.93586 26.1489 8.95906 26.2863 9.00934 26.4146C9.05961 26.5429 9.13587 26.6595 9.23332 26.7569C9.33078 26.8544 9.44733 26.9306 9.57565 26.9809C9.70398 27.0312 9.84131 27.0544 9.97903 27.0491C10.1167 27.0437 10.2519 27.01 10.3759 26.95C10.5 26.89 10.6103 26.8049 10.7 26.7003L18 19.4103L25.29 26.7003C25.4813 26.8641 25.7274 26.9497 25.979 26.94C26.2307 26.9303 26.4694 26.8259 26.6475 26.6478C26.8256 26.4697 26.93 26.231 26.9397 25.9793C26.9494 25.7276 26.8638 25.4816 26.7 25.2903L19.41 18.0003Z" fill="white"/>
+                </svg>
+                <div class="modal__form">
+                    <p class="modal__text">Оставьте заявку и мы свяжемся с Вами в ближайшее время, проконсультируем и ответим на все имеющиеся вопросы.</p>
+                    <form class="form" action="#" method="post">
+                        <input type="text" name="name" placeholder="Имя"
+                        required>
+                        <input type="text" name="phone" placeholder="Телефон" required>
+                        <button type="submit" class="button-order">Заказать звонок</button>
+                    </form> 
+                </div>
+            </div> 
+            <div class="modal__image">
+                <img src="../assets/images/modal/modal-image.png" alt="Человек за ноутбуком">
+            </div>
+        </div>
+        
+        <div class="modal success" data-modal="2">
+            <svg width="36" class="modal__cross modal__close" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.41 18.0003L26.7 10.7103C26.8638 10.519 26.9494 10.2729 26.9397 10.0212C26.93 9.76953 26.8256 9.53079 26.6475 9.3527C26.4694 9.1746 26.2307 9.07027 25.979 9.06055C25.7274 9.05083 25.4813 9.13644 25.29 9.30026L18 16.5903L10.71 9.29026C10.5187 9.12643 10.2726 9.04083 10.0209 9.05055C9.76924 9.06027 9.53051 9.1646 9.35241 9.3427C9.17432 9.52079 9.06998 9.75953 9.06026 10.0112C9.05054 10.2629 9.13615 10.509 9.29997 10.7003L16.59 18.0003L9.28997 25.2903C9.18529 25.3799 9.10027 25.4902 9.04025 25.6143C8.98022 25.7384 8.94649 25.8735 8.94117 26.0112C8.93586 26.1489 8.95906 26.2863 9.00934 26.4146C9.05961 26.5429 9.13587 26.6595 9.23332 26.7569C9.33078 26.8544 9.44733 26.9306 9.57565 26.9809C9.70398 27.0312 9.84131 27.0544 9.97903 27.0491C10.1167 27.0437 10.2519 27.01 10.3759 26.95C10.5 26.89 10.6103 26.8049 10.7 26.7003L18 19.4103L25.29 26.7003C25.4813 26.8641 25.7274 26.9497 25.979 26.94C26.2307 26.9303 26.4694 26.8259 26.6475 26.6478C26.8256 26.4697 26.93 26.231 26.9397 25.9793C26.9494 25.7276 26.8638 25.4816 26.7 25.2903L19.41 18.0003Z" fill="white"/>
+            </svg>
+            <img class="modal__logo" src="../assets/images/modal/modal-logo.png" alt="Лого CzementArt">
+            <div>
+                <p>Спасибо за Вашу Заявку!</p>
+                <p>Наш менеджер перезвонит в течении дня</p>
+            </div>
+            <img class="modal__image" src="../assets/images/modal/modal-image.png" alt="Человек за ноутбуком">
+        </div>
+        
+        <div class="modal none-success" data-modal="3">
+            <svg width="36" class="modal__cross modal__close" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.41 18.0003L26.7 10.7103C26.8638 10.519 26.9494 10.2729 26.9397 10.0212C26.93 9.76953 26.8256 9.53079 26.6475 9.3527C26.4694 9.1746 26.2307 9.07027 25.979 9.06055C25.7274 9.05083 25.4813 9.13644 25.29 9.30026L18 16.5903L10.71 9.29026C10.5187 9.12643 10.2726 9.04083 10.0209 9.05055C9.76924 9.06027 9.53051 9.1646 9.35241 9.3427C9.17432 9.52079 9.06998 9.75953 9.06026 10.0112C9.05054 10.2629 9.13615 10.509 9.29997 10.7003L16.59 18.0003L9.28997 25.2903C9.18529 25.3799 9.10027 25.4902 9.04025 25.6143C8.98022 25.7384 8.94649 25.8735 8.94117 26.0112C8.93586 26.1489 8.95906 26.2863 9.00934 26.4146C9.05961 26.5429 9.13587 26.6595 9.23332 26.7569C9.33078 26.8544 9.44733 26.9306 9.57565 26.9809C9.70398 27.0312 9.84131 27.0544 9.97903 27.0491C10.1167 27.0437 10.2519 27.01 10.3759 26.95C10.5 26.89 10.6103 26.8049 10.7 26.7003L18 19.4103L25.29 26.7003C25.4813 26.8641 25.7274 26.9497 25.979 26.94C26.2307 26.9303 26.4694 26.8259 26.6475 26.6478C26.8256 26.4697 26.93 26.231 26.9397 25.9793C26.9494 25.7276 26.8638 25.4816 26.7 25.2903L19.41 18.0003Z" fill="white"/>
+            </svg>
+            <img class="modal__logo" src="../assets/images/modal/modal-logo.png" alt="Лого CzementArt">
+            <div>
+                <p>Упс! Что-то пошло не так...</p>
+            </div>
+            <img class="modal__image" src="../assets/images/modal/modal-image.png" alt="Человек за ноутбуком">
+        </div>
+        
+        <div class="overlay" id="overlay-modal"></div>        <!-- JS -->
         <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
         <script src="assets/js/app.js"></script>
     </body>
